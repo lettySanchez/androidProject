@@ -6,12 +6,14 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -25,11 +27,12 @@ public class PlaceHold extends Activity implements View.OnClickListener {
 
 
     // Variable for storing current date and time
-    private int startYear, startMonth, startDay, startHour, startMinute;
-    private int endYear, endMonth, endDay, endHour, endMinute;
+    private Integer startYear, startMonth, startDay, startHour, startMinute;
+    private Integer endYear, endMonth, endDay, endHour, endMinute;
 
     private static final String TAG = "PLACEHOLD";
-
+    final Calendar c = Calendar.getInstance();
+    final Calendar c2 = Calendar.getInstance();
     /**
      * Called when the activity is first created.
      */
@@ -37,8 +40,8 @@ public class PlaceHold extends Activity implements View.OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.placehold);
-        int day1 = startDay;
-        int day2 = endDay;
+//        int day1 = startDay;
+//        int day2 = endDay;
 
         btnCalendar1 = (Button) findViewById(R.id.pickdate);
         btnCalendar2 = (Button) findViewById(R.id.returndate);
@@ -80,11 +83,13 @@ public class PlaceHold extends Activity implements View.OnClickListener {
 
         bookTitle = (EditText) findViewById(R.id.boooktitle_edittxt);
         inputBookTitle = bookTitle.getText().toString();
+
+
         //************ PICK DATE****************
         if (v == btnCalendar1) {
 
             // Process to get Current Date
-            final Calendar c = Calendar.getInstance();
+
             startYear = c.get(Calendar.YEAR);
             startMonth = c.get(Calendar.MONTH);
             startDay = c.get(Calendar.DAY_OF_MONTH);
@@ -100,10 +105,16 @@ public class PlaceHold extends Activity implements View.OnClickListener {
                             // Display Selected date in textbox
                             txtDate1.setText(dayOfMonth + "-"
                                     + (monthOfYear + 1) + "-" + year);
+                            startDay = dayOfMonth;
 
                         }
                     }, startYear, startMonth, startDay);
             dpd.show();
+
+//            startDay = dpd.getDatePicker().getDayOfMonth();
+//            startMonth =dpd.getDatePicker().getMonth();
+//            startYear = dpd.getDatePicker().getYear();
+            Log.d("INNER1", startDay.toString());
 
             c.set(startYear, startMonth, startDay);
             valueDay1 = startDay;
@@ -114,10 +125,10 @@ public class PlaceHold extends Activity implements View.OnClickListener {
         //************ RETURN DATE****************
         else if (v == btnCalendar2) {
             // Process to get Current Date
-            final Calendar c = Calendar.getInstance();
-            endYear = c.get(Calendar.YEAR);
-            endMonth = c.get(Calendar.MONTH);
-            endDay = c.get(Calendar.DAY_OF_MONTH);
+
+            endYear = c2.get(Calendar.YEAR);
+            endMonth = c2.get(Calendar.MONTH);
+            endDay = c2.get(Calendar.DAY_OF_MONTH);
 
 
             // Launch Date Picker Dialog
@@ -130,13 +141,16 @@ public class PlaceHold extends Activity implements View.OnClickListener {
                             // Display Selected date in textbox
                             txtDate2.setText(dayOfMonth + "-"
                                     + (monthOfYear + 1) + "-" + year);
+                            endDay = dayOfMonth;
 
                         }
                     }, endYear, endMonth, endDay);
             dpd.show();
-
-            c.set(endYear, endMonth, endDay);
-
+//            endDay = dpd.getDatePicker().getDayOfMonth();
+//            endMonth =dpd.getDatePicker().getMonth();
+//            endYear = dpd.getDatePicker().getYear();
+            c2.set(endYear, endMonth, endDay);
+            Log.d("INNER2", endDay.toString());
             valueDay2 = endDay;
 //            returnDate = txtDate2.getText().toString();
 //            valueDay2 = Integer.parseInt(returnDate);
@@ -145,9 +159,9 @@ public class PlaceHold extends Activity implements View.OnClickListener {
         else if (v == btnTimePicker1) {
 
             // Process to get Current Time
-            Calendar c = Calendar.getInstance();
-            startHour = c.get(Calendar.HOUR_OF_DAY);
-            startMinute = c.get(Calendar.MINUTE);
+//            Calendar c = Calendar.getInstance();
+//            startHour = c.get(Calendar.HOUR_OF_DAY);
+//            startMinute = c.get(Calendar.MINUTE);
 
             // Launch Time Picker Dialog
             TimePickerDialog tpd = new TimePickerDialog(this,
@@ -166,9 +180,9 @@ public class PlaceHold extends Activity implements View.OnClickListener {
         else if (v == btnTimePicker2) {
 
             // Process to get Current Time
-            Calendar c = Calendar.getInstance();
-            endHour = c.get(Calendar.HOUR_OF_DAY);
-            endMinute = c.get(Calendar.MINUTE);
+//            Calendar c = Calendar.getInstance();
+//            endHour = c.get(Calendar.HOUR_OF_DAY);
+//            endMinute = c.get(Calendar.MINUTE);
 
             // Launch Time Picker Dialog
             TimePickerDialog tpd = new TimePickerDialog(this,
@@ -187,18 +201,30 @@ public class PlaceHold extends Activity implements View.OnClickListener {
         ////************ SUBMIT BUTTON ****************
         else if (v.getId() == R.id.submit_button) {
 
-            Intent i = new Intent(this, LogIn.class);
-            startActivity(i);
-        }
 
+//            endDay =  c2.get(Calendar.DATE)  ;
+//            startDay = c.get(Calendar.DATE);
+            Log.d("DAY: " , endDay.toString());
+            Log.d("DAY: " , startDay.toString());
+            if (endDay - startDay >= 7) {
+                Toast toast = Toast.makeText(getBaseContext(),"Can not reserve for more than 7 days", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+
+            } else {
+                Intent i = new Intent(this, LogIn.class);
+                startActivity(i);
+
+            }
+        }
         //*********************
-        Log.d(TAG, "day1" + valueDay1);
-        Log.d(TAG, "returnday " + valueDay2);
-        if(startYear == endYear &&startMonth == endMonth){
-            Log.d(TAG, "sameYear& MOnth - ");
-
-
-        }
+//        Log.d(TAG, "day1" + valueDay1);
+//        Log.d(TAG, "returnday " + valueDay2);
+//        if(startYear == endYear &&startMonth == endMonth){
+//            Log.d(TAG, "sameYear& MOnth - ");
+//
+//
+//        }
 
     }
 
