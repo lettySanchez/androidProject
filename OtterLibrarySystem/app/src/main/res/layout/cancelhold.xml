@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dip">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reservations"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:padding="20dip"/>
+    <TextView
+        android:id="@+id/number_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Number:"
+        android:textSize="20sp"/>
+    <EditText
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:lines="1"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/pickdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick up Date:"
+            android:textSize="20dp"/>
+        <EditText
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:lines="1"/>
+        <TextView
+            android:id="@+id/pickhour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick up Hour:"
+            android:textSize="20dp"/>
+        <EditText
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:lines="1"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/returndate"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:text="Return Date"
+            android:textSize="20dp"
+            android:layout_weight="0.45" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:lines="1"
+            android:layout_weight="0.79" />
+        <TextView
+            android:id="@+id/returnhour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Return hour"
+            android:textSize="20dp"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:lines="1"
+            android:layout_weight="1.67" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/boooktitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Title:"
+        android:textSize="20dp"/>
+    <EditText
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:hint=""
+        android:lines="1"/>
+
+    </LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="60dip">
+
+    <TextView
+        android:text="@string/welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="30.5sp" />
+
+    <Button
+        android:id="@+id/createaccount_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/createaccount_button"
+        android:textSize="18.5sp"/>
+    <Button
+        android:id="@+id/placehold_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/placehold_button"
+        android:textSize="18.5sp"/>
+    <Button
+        android:id="@+id/cancelhold_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cancelhold_button"
+        android:textSize="18.5sp"/>
+    <Button
+        android:id="@+id/managesystem_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/managesystem_button"
+        android:textSize="18.5sp"/>
+
+
+</LinearLayout>

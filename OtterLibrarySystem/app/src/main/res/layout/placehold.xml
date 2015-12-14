@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:textSize="30dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:text="Place hold"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="5dp">
+
+    </TextView>
+    <!--<TextView android:textColor="#fff"-->
+        <!--android:textSize="20dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:text="Date and Time Picker Dialog"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:paddingBottom="25dp">-->
+
+    <!--</TextView>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/txtDate1">
+            <requestFocus>
+
+            </requestFocus>
+        </EditText>
+        <Button
+            android:id="@+id/pickdate"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Pickup Date"
+            android:layout_width="100dp">
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/txtTime1">
+            <requestFocus>
+
+            </requestFocus>
+        </EditText>
+        <Button android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:id="@+id/pickhour_button"
+            android:text="Pick up Hour"
+            android:layout_width="100dp">
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/txtDate2">
+            <requestFocus>
+
+            </requestFocus>
+        </EditText>
+        <Button
+            android:id="@+id/returndate"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="Return Date"
+            android:layout_width="100dp">
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/txtTime2">
+            <requestFocus>
+
+            </requestFocus>
+        </EditText>
+        <Button android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:id="@+id/returnhour_button"
+            android:text="Retun Hour"
+            android:layout_width="100dp">
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="20dip"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Title: "/>
+
+        <EditText
+            android:id="@+id/boooktitle_edittxt"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:hint=""
+            android:lines="1"/>
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:padding="20dip">-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/displayDate"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Place Hold"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="30sp"-->
+        <!--android:padding="10dip"/>-->
+    <!--<LinearLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center">-->
+
+        <!--<Button-->
+        <!--android:id="@+id/pickdate"-->
+        <!--android:layout_width="122dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Pick a Date"/>-->
+    <!--<Button-->
+        <!--android:id="@+id/pickhour_button"-->
+        <!--android:layout_width="122dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Pick a Hour"/>-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/returndate"-->
+            <!--android:layout_width="122dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Return Date"/>-->
+        <!--<Button-->
+            <!--android:id="@+id/returnhour_button"-->
+            <!--android:layout_width="122dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Return Hour"/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:padding="20dip"-->
+        <!--android:weightSum="1">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Book Title: "/>-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/boooktitle"-->
+            <!--android:layout_width="208dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint=""-->
+            <!--android:lines="1"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/submit_button"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Submit"/>-->
+
+
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+        <!--<TimePicker-->
+            <!--android:id="@+id/timePicker"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:timePickerMode="spinner"/>-->
+        <!--<CalendarView-->
+            <!--android:id="@+id/calendar_view"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+
+    <!--</LinearLayout>-->
+
+
+<!--</LinearLayout>-->

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Otter Library System</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_message">Welcome!</string>
+    <string name="createaccount_button">Create Account</string>
+    <string name="login_button">Log in</string>
+    <string name="createa_button">Create Acccount</string>
+    <string name="placehold_button">Place Hold</string>
+    <string name="pickdate">Pick Date</string>
+    <string name="pickhour">Pick Hour</string>
+    <string name="returndate">Return Date</string>
+    <string name="returnhour">Return Hour</string>
+    <string name="booktitle_edittxt">Book Title</string>
+    <string name="submit">submit</string>
+    <string name="reservationnumber">Reservation Number</string>
+    <string name="cancelhold_button">Cancel Hold</string>
+    <string name="managesystem_button">Manage System</string>
+</resources>
